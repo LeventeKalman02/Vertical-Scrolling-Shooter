@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    //script to load all 3 levels 
+    //script to load all 3 levels using the sceneManager
     public void LoadLevel1()
     {
         SceneManager.LoadSceneAsync(1);
