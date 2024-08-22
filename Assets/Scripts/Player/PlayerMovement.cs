@@ -1,17 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //player movement
     public float moveSpeed = 10f;
     Rigidbody2D rb;
     private Vector2 movement;
+
+    //screen Boundaries
+    public Camera mainCamera;
+    private Vector2 screenBounds;
+    private float objectWidth;
+    private float objectHeight;
 
     //awake to get the rigidbody component
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    // Start is called before the first frame update
+    private void Start()
+    {
+        //get the screen size in relation to the world
+        //returns an (X,Y) value half the screen size, these values are negative
+        screenBounds = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, mainCamera.transform.position.z));
+
+        //get the object width so that the whole object stays within the boundaries 
+        objectWidth = transform.GetComponent<SpriteRenderer>().bounds.extents.x;
+        objectHeight = transform.GetComponent<SpriteRenderer>().bounds.extents.y;
+    }
+
+    //late update is called after the movement function
+    private void LateUpdate()
+    {
+        Vector3 viewPos = transform.position;
+        //clamp current x, y position to screen position 
+        //                              min value + object width      max value * -1 to make it positive - object width
+        viewPos.x = Mathf.Clamp(viewPos.x, screenBounds.x * -1 + objectWidth, screenBounds.x - objectWidth);
+        //repeat for Y position
+        viewPos.y = Mathf.Clamp(viewPos.y, screenBounds.y * -1 + objectHeight, screenBounds.y - objectHeight);
+        //set position to equal new altered position
+        transform.position = viewPos;
     }
 
     //fixed update for running physics calculations
