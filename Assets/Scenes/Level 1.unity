@@ -505,10 +505,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRate: 3
   canSpawn: 1
-  spawnedEnemies: 0
+  spawnedEnemies: []
   currLevel: 1
   enemyPrefab: {fileID: 7919437443093427354, guid: 90a4f5d03f0cf384fa2a5dd2aad72a79, type: 3}
-  levelOverUI: {fileID: 0}
+  levelOverUI: {fileID: 308775581}
 --- !u!1 &308775581
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,10 +821,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRate: 3
   canSpawn: 1
-  spawnedEnemies: 0
+  spawnedEnemies: []
   currLevel: 1
   enemyPrefab: {fileID: 7919437443093427354, guid: 90a4f5d03f0cf384fa2a5dd2aad72a79, type: 3}
-  levelOverUI: {fileID: 0}
+  levelOverUI: {fileID: 308775581}
 --- !u!1 &486845824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,10 +1394,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRate: 3
   canSpawn: 1
-  spawnedEnemies: 0
+  spawnedEnemies: []
   currLevel: 1
   enemyPrefab: {fileID: 7919437443093427354, guid: 90a4f5d03f0cf384fa2a5dd2aad72a79, type: 3}
-  levelOverUI: {fileID: 0}
+  levelOverUI: {fileID: 308775581}
 --- !u!1 &932485328
 GameObject:
   m_ObjectHideFlags: 0
