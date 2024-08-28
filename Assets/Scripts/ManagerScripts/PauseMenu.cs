@@ -13,7 +13,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         //if the Escape key is pressed then pause the game
         //else resume
@@ -45,7 +45,7 @@ public class PauseMenu : MonoBehaviour
     //Freeze Time in the game
     //display pause menu
     //set variable to true
-    void Pause()
+    public void Pause()
     {
         //show the display
         pauseMenuUI.SetActive(true);
