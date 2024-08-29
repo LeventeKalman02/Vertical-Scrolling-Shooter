@@ -25,6 +25,6 @@ public class EnemyShooting : MonoBehaviour
     //enemy shooting funtion
     private void Shoot()
     {
-        Instantiate(bulletPrefab, bulletPos.position, Quaternion.identity);
+        Instantiate(bulletPrefab, bulletPos.position, bulletPos.rotation);
     }
 }
