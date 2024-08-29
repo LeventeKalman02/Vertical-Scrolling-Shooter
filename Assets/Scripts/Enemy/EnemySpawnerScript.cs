@@ -25,6 +25,7 @@ public class EnemySpawnerScript : MonoBehaviour
 
         while (canSpawn)
         {
+
             //check to set the amount of enemies that can spawn in a level, This can be changed in the editor for each level.
             if (currLevel == 1 && spawnedEnemies.Count <= 9)
             {
@@ -53,6 +54,7 @@ public class EnemySpawnerScript : MonoBehaviour
     {
         GameObject obj = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
         spawnedEnemies.Add(obj);
+        //CheckAlive();
     }
 
     //if there are no more enemies to spawn in the level, display the level over screen

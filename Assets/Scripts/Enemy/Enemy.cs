@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int health = 100;
-    
+
     //function for enemy health
     public void TakeDamage(int damage)
     {
@@ -18,8 +18,9 @@ public class Enemy : MonoBehaviour
     }
 
     //function to handle enemy death
-    void Die()
+    public void Die()
     {
         Destroy(gameObject);
     }
+
 }

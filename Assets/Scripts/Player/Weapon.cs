@@ -8,6 +8,8 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
 
+    public AudioSource src;
+
     // Update is called once per frame
     void Update()
     {
@@ -15,11 +17,13 @@ public class Weapon : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Shoot();
+            //play the shooting audio sound
+            src.Play();
         }
     }
 
     //function for spawning the bullet and shooting
-    void Shoot()
+    private void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
