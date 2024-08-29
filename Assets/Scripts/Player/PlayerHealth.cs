@@ -5,25 +5,31 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public int health = 100;
-    public int collisionDamage = 25;
+    public int collisionDamage = 20;
 
-    Rigidbody2D rb;
+    //reference to the healthbar script
+    public HealthBar healthBar;
+    public GameObject levelFailedCanvas;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        //set the max health for the healthbar
+        healthBar.SetMaxHealth(health);
     }
 
     //function for player health
     public void TakeDamage(int damage)
     {
         health -= damage;
+        healthBar.SetHealth(health);
         Debug.Log("Player Health: " + health);
 
         if (health <= 0)
         {
+            //call die function, set the level failed canvas to true and stop the game
             Die();
+            levelFailedCanvas.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 

@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public void ToMenu()
+    {
+        SceneManager.LoadSceneAsync(0);
+    }
+
     //script to load all 3 levels using the sceneManager
     public void LoadLevel1()
     {
@@ -20,4 +25,6 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(3);
     }
+
+
 }

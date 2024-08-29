@@ -54,7 +54,6 @@ public class EnemySpawnerScript : MonoBehaviour
     {
         GameObject obj = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
         spawnedEnemies.Add(obj);
-        //CheckAlive();
     }
 
     //if there are no more enemies to spawn in the level, display the level over screen
@@ -62,20 +61,5 @@ public class EnemySpawnerScript : MonoBehaviour
     {
         Time.timeScale = 0f;
         levelOverUI.SetActive(true);
-    }
-
-    //checks if there are any enemies alive
-    public void CheckAlive()
-    {
-        //loop over list of spawned enemies to check if there is any alive before starting the next wave
-        //reversed for loop
-        for (int i = spawnedEnemies.Count - 1; i >= 0; i--)
-        {
-            //check if entry is null, if true, remove from the list
-            if (spawnedEnemies[i] == null)
-            {
-                spawnedEnemies.RemoveAt(i);
-            }
-        }
     }
 }

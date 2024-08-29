@@ -8,6 +8,7 @@ public class EnemyShooting : MonoBehaviour
     public Transform bulletPos;
 
     private float timer;
+    public float timerInterval = 1f;
 
     // Update is called once per frame
     void Update()
@@ -15,7 +16,7 @@ public class EnemyShooting : MonoBehaviour
         //make sure timer is in seconds
         timer += Time.deltaTime;
 
-        if(timer >= 2)
+        if(timer >= timerInterval)
         {
             timer = 0;
             Shoot();
