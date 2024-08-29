@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 8807579432105981132}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -405,3 +405,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2885146035960560040, guid: a8baaddac8a5c004b94c764ee541ab03, type: 3}
   bulletPos: {fileID: 1883587842816737338}
+  timerInterval: 1

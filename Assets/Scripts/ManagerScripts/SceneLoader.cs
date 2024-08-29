@@ -14,16 +14,19 @@ public class SceneLoader : MonoBehaviour
     public void LoadLevel1()
     {
         SceneManager.LoadSceneAsync(1);
+        Time.timeScale = 1f;
     }
 
     public void LoadLevel2()
     {
         SceneManager.LoadSceneAsync(2);
+        Time.timeScale = 1f;
     }
 
     public void LoadLevel3()
     {
         SceneManager.LoadSceneAsync(3);
+        Time.timeScale = 1f;
     }
 
 

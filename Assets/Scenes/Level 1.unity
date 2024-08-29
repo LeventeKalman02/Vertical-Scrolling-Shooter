@@ -3836,12 +3836,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5410733593082247881, guid: 46efddb92549aa7489e2a7ba71b917be, type: 3}
       propertyPath: spawnRate
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5410733593082247881, guid: 46efddb92549aa7489e2a7ba71b917be, type: 3}
       propertyPath: levelOverUI
       value: 
-      objectReference: {fileID: 308775581}
+      objectReference: {fileID: 1995833207}
     - target: {fileID: 7700989266937223800, guid: 46efddb92549aa7489e2a7ba71b917be, type: 3}
       propertyPath: m_Name
       value: Spawner
