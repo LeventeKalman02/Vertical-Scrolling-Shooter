@@ -2243,7 +2243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5410733593082247881, guid: 46efddb92549aa7489e2a7ba71b917be, type: 3}
       propertyPath: spawnRate
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5410733593082247881, guid: 46efddb92549aa7489e2a7ba71b917be, type: 3}
       propertyPath: levelOverUI
@@ -3593,7 +3593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5410733593082247881, guid: 46efddb92549aa7489e2a7ba71b917be, type: 3}
       propertyPath: spawnRate
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5410733593082247881, guid: 46efddb92549aa7489e2a7ba71b917be, type: 3}
       propertyPath: levelOverUI

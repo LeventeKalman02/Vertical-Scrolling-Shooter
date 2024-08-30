@@ -14,7 +14,7 @@ public class Weapon : MonoBehaviour
     void Update()
     {
         //get the input for shooting
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             Shoot();
             //play the shooting audio sound
@@ -23,7 +23,7 @@ public class Weapon : MonoBehaviour
     }
 
     //function for spawning the bullet and shooting
-    private void Shoot()
+    public void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }

@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 10f;
     Rigidbody2D rb;
     private Vector2 movement;
+    private Vector2 joystickMovement;
+    public Joystick joystick;
 
     //screen Boundaries
     public Camera mainCamera;
@@ -50,17 +52,34 @@ public class PlayerMovement : MonoBehaviour
     //fixed update for running physics calculations
     private void FixedUpdate()
     {
-        Movement();
+        if (joystick.isActiveAndEnabled)
+        {
+            JoystickMovement();
+        }
+        else
+        {
+            Movement();
+        }        
     }
 
     //move the player 
     private void Movement()
     {
+        //keyboard controls
         //get the input for the X and Y axis
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
         //add the movement to the rb velocity
-        rb.velocity = movement * moveSpeed;
+        rb.velocity = movement * moveSpeed;        
+    }
+
+    private void JoystickMovement()
+    {
+        //joystick controls
+        joystickMovement.x = joystick.Horizontal;
+        joystickMovement.y = joystick.Vertical;
+
+        rb.velocity = joystickMovement * moveSpeed;
     }
 }
